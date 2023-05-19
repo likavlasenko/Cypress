@@ -18,10 +18,24 @@ describe('Context: My first Tests', () => {
         // runs after each test case, aka afterMethod in TestNG
     })
 
-    it('Opening a web application', () => {
+    it.only('Opening a web application', () => {
         cy.visit('https://practice.cydeo.com/');
         cy.get(':nth-child(3) > a').click();
     })
+
+    it('Test 2', () =>{
+        expect(false).to.equal(false)
+    })
+    it('Test 3', () => {
+        expect(false).not.to.equal(true)
+    })
+    it('Test 4', () => {
+        expect(5).to.equal(5)
+    })
+    it('Test 5', () => {
+        expect(true).to.equal('5' == 5)
+    })
+    
     
 
 })
